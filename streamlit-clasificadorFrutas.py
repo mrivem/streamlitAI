@@ -3,7 +3,6 @@ import requests
 from PIL import ExifTags, Image
 import tensorflow as tf
 from tensorflow import keras
-from tensorflow.keras.losses import CategoricalCrossentropy
 from keras.models import load_model
 import streamlit as st
 
