@@ -20,20 +20,15 @@ st.markdown('Por Victor Matamala y Matias Rivera', unsafe_allow_html=True)
 st.write("Este proyecto clasifica fotos de frutas utilizando una red neuronal convolucional.")
 with st.expander("🧙 Haz click aca para saber mas sobre el modelo 🔮"):
     st.markdown("""
-        <p>This project used transfer learning to build a CNN pre-trained on ImageNet, using
-        a ResNet-50 architecture. The implementation was done using fastai (v2) and PyTorch. 
-        The training dataset was based on the <a href="https://www.akc.org/dog-breeds/" target="_blank">AKC-recognized dog breeds</a>, 
-        with approximately 150 images per dog breed taken from the internet. (An earlier iteration of 
-        this project used the <a href="http://vision.stanford.edu/aditya86/ImageNetDogs/" target="_blank">Stanford dogs dataset</a>, 
-        but I found that the images in that dataset were not representative of images "in the wild", as the 
-        same model trained on those images gave unrealistically high accuracies but did not generalize well.)</p>
+        <p>This is an introductory experiment on Artificial Inteligence. We trained a Convolutional Neural Network (CNN) with a dataset of 
+        about 8,000 images of fruits. Our AI presents an accuracy of ~97% while classifying Apples, Bananas and Carambolas. 
+        We used Google’s Colab as our platform for training this AI. The implementation was done using Tensorflow and Keras. 
+        The training dataset was based on the <a href="https://www.kaggle.com/chrisfilo/fruit-recognition" target="_blank">Fruit Recognition</a>, 
+        with approximately 3,000 images per fruit. 
         <p>10% of the data were set aside for the test set (holdout set), and 20% of the data
-        were used for the validation set. Images were resized to 128x128 pixel squares before
-        training using random-resize cropping.</p>
-        <p>The final model was trained for a total of 8 epochs: 3 with the ResNet layers frozen,
-        training only the new classification head, and 5 additional epochs with all layers unfrozen.
-        The final <b>validation set accuracy was 76.3%</b>, and the <b>test set/holdout accuracy was 75.4%</b>.</p>
-        <p>The code used to train the model is available at <a href="https://github.com/willjobs/dog-classifier" target="_blank">https://github.com/willjobs/dog-classifier</a>.</p>
+        were used for the validation set. Images were resized to 150x150 pixel squares</p>
+        <p>The final model was trained for a total of 52 epochs.
+        The final <b>validation set accuracy was 99.9%</b></p>
     """, unsafe_allow_html=True)
 
 file_data = st.file_uploader("Selecciona una imagen.", type=["jpg", "jpeg", "png"])
